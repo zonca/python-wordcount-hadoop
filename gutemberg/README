@@ -1,4 +1,5 @@
 Input folder,
 should have some text files,
+download them with the script download-inputs.sh
 see:
 http://www.michael-noll.com/tutorials/writing-an-hadoop-mapreduce-program-in-python/#download-example-input-data
