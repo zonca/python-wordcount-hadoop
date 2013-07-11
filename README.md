@@ -11,3 +11,9 @@ http://www.sdsc.edu/us/resources/gordon/gordon_hadoop.html
 
 It uses the Hadoop streaming interface to send input and get outputs from the Python mapper and reducer.
 HDFS is setup on the local SSD flash drives on the computing nodes, output is then copied back to local space.
+
+How to run:
+
+* clone the repository in your home folder
+* grab the input files by running `download-inputs.sh` in the `gutemberg` folder
+* run: `qsub run.sh`
