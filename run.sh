@@ -58,7 +58,7 @@ $HADOOP_HOME/bin/hadoop --config $HADOOP_CONF_DIR dfs -mkdir Input
 sleep 30s
 $HADOOP_HOME/bin/hadoop --config $HADOOP_CONF_DIR dfs -copyFromLocal $FOLDER/gutemberg/*.txt Input
 echo "Input files on HDFS"
-$HADOOP_HOME/bin/hadoop --config $HADOOP_CONF_DIR dfs -ls Test
+$HADOOP_HOME/bin/hadoop --config $HADOOP_CONF_DIR dfs -ls Input
 echo "Run the hadoop job"
 $HADOOP_HOME/bin/hadoop --config $HADOOP_CONF_DIR jar $HADOOP_HOME/contrib/streaming/hadoop*streaming*.jar -file $FOLDER/mapper.py -mapper $FOLDER/mapper.py -file $FOLDER/reducer.py -reducer $FOLDER/reducer.py -input /user/$USER/Input/* -output /user/$USER/Output
 echo "Output files on HDFS"
