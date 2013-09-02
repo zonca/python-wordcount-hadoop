@@ -1,0 +1,77 @@
+ ~/p/software/python-wordcount-hadoop master$ . runemr.sh 
+using configs in /home/zonca/.mrjob.conf
+using existing scratch bucket mrjob-ecd1d07aeee083dd
+using s3://mrjob-ecd1d07aeee083dd/tmp/ as our scratch dir on S3
+creating tmp directory /tmp/mrjobjob.zonca.20130901.192250.785550
+writing master bootstrap script to /tmp/mrjobjob.zonca.20130901.192250.785550/b.py
+Copying non-input files into s3://mrjob-ecd1d07aeee083dd/tmp/mrjobjob.zonca.20130901.192250.785550/files/
+Waiting 5.0s for S3 eventual consistency
+Creating Elastic MapReduce job flow
+Job flow created with ID: j-2E83MO9QZQILB
+Created new job flow j-2E83MO9QZQILB
+Job launched 30.9s ago, status STARTING: Starting instances
+Job launched 62.1s ago, status STARTING: Starting instances
+Job launched 93.2s ago, status STARTING: Starting instances
+Job launched 123.9s ago, status BOOTSTRAPPING: Running bootstrap actions
+Job launched 155.6s ago, status BOOTSTRAPPING: Running bootstrap actions
+Job launched 186.9s ago, status BOOTSTRAPPING: Running bootstrap actions
+Job launched 219.2s ago, status BOOTSTRAPPING: Running bootstrap actions
+Job launched 250.5s ago, status RUNNING: Running step (mrjobjob.zonca.20130901.192250.785550: Step 1 of 1)
+Opening ssh tunnel to Hadoop job tracker
+Connect to job tracker at: http://localhost:40630/jobtracker.jsp
+Job launched 282.8s ago, status RUNNING: Running step (mrjobjob.zonca.20130901.192250.785550: Step 1 of 1)
+ map  25% reduce   0%
+Job launched 314.4s ago, status RUNNING: Running step (mrjobjob.zonca.20130901.192250.785550: Step 1 of 1)
+ map 100% reduce 100%
+Job completed.
+Running time was 91.0s (not counting time spent waiting for the EC2 instances)
+Fetching counters from S3...
+Waiting 5.0s for S3 eventual consistency
+Counters from step 1:
+  File Input Format Counters :
+    Bytes Read: 680396
+  File Output Format Counters :
+    Bytes Written: 159612
+  FileSystemCounters:
+    FILE_BYTES_READ: 164216
+    FILE_BYTES_WRITTEN: 527942
+    HDFS_BYTES_READ: 576
+    S3_BYTES_READ: 680396
+    S3_BYTES_WRITTEN: 159612
+  Job Counters :
+    Launched map tasks: 4
+    Launched reduce tasks: 1
+    Rack-local map tasks: 4
+    SLOTS_MILLIS_MAPS: 53319
+    SLOTS_MILLIS_REDUCES: 26460
+    Total time spent by all maps waiting after reserving slots (ms): 0
+    Total time spent by all reduces waiting after reserving slots (ms): 0
+  Map-Reduce Framework:
+    CPU time spent (ms): 9920
+    Combine input records: 0
+    Combine output records: 0
+    Map input bytes: 674570
+    Map input records: 12760
+    Map output bytes: 1065859
+    Map output materialized bytes: 227882
+    Map output records: 109653
+    Physical memory (bytes) snapshot: 745369600
+    Reduce input groups: 12664
+    Reduce input records: 109653
+    Reduce output records: 12664
+    Reduce shuffle bytes: 227882
+    SPLIT_RAW_BYTES: 576
+    Spilled Records: 219306
+    Total committed heap usage (bytes): 874471424
+    Virtual memory (bytes) snapshot: 2252054528
+Streaming final output from s3://mrjob-ecd1d07aeee083dd/tmp/mrjobjob.zonca.20130901.192250.785550/output/
+removing tmp directory /tmp/mrjobjob.zonca.20130901.192250.785550
+Removing all files in s3://mrjob-ecd1d07aeee083dd/tmp/mrjobjob.zonca.20130901.192250.785550/
+Removing all files in s3://mrjob-ecd1d07aeee083dd/tmp/logs/j-2E83MO9QZQILB/
+
+
+Killing our SSH tunnel (pid 10264)
+Terminating job flow: j-2E83MO9QZQILB
+ ~/p/software/python-wordcount-hadoop master$ 
+ ~/p/software/python-wordcount-hadoop master$ 
+ ~/p/software/python-wordcount-hadoop master$ 

@@ -17,3 +17,10 @@ How to run:
 * clone the repository in your home folder
 * grab the input files by running `download-inputs.sh` in the `gutemberg` folder
 * run: `qsub run.sh`
+
+Run on Amazon Elastic Map Reduce with MrJob
+-------------------------------------------
+
+See the mrjob/ folder, more details on:
+
+http://www.andreazonca.com/2013/09/run-hadoop-python-jobs-on-amazon-with-mrjob.html
